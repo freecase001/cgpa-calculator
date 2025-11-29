@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CGPA Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>CGPA Calculator (Nigeria)</h1>
+
+        <form id="courseForm">
+            <input type="text" id="courseName" placeholder="Course Name" required>
+            <input type="number" id="courseUnit" placeholder="Course Unit" min="1" required>
+            <input type="number" id="courseScore" placeholder="Score (0-100)" min="0" max="100" required>
+            <button type="submit">Add Course</button>
+        </form>
+
+        <h2>Course List</h2>
+        <table id="courseTable">
+            <thead>
+                <tr>
+                    <th>Course</th>
+                    <th>Unit</th>
+                    <th>Score</th>
+                    <th>Grade</th>
+                    <th>Grade Point</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Courses will appear here -->
+            </tbody>
+        </table>
+
+        <button id="calculateBtn">Calculate CGPA</button>
+        <h2 id="result"></h2>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

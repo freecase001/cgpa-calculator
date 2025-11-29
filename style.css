@@ -1,0 +1,103 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input, button {
+    padding: 10px;
+    font-size: 16px;
+}
+
+button {
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+.deleteBtn {
+    background-color: #f44336; /* Red button */
+    color: white;              /* White text */
+    border: none;              /* No border */
+    padding: 5px 10px;         /* Size of button */
+    border-radius: 5px;        /* Rounded corners */
+    cursor: pointer;           /* Mouse shows pointer */
+}
+
+.deleteBtn:hover {
+    background-color: #d32f2f; /* Darker red when hovered */
+}
+/* Table header */
+table thead {
+    background-color: #4CAF50; /* Green header */
+    color: white;               /* White text */
+}
+
+/* Alternating row colors */
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9; /* Light grey for even rows */
+}
+
+/* Hover effect */
+tbody tr:hover {
+    background-color: #f1f1f1; /* Light grey when mouse is over row */
+}
+/* Mobile-friendly table */
+@media (max-width: 600px) {
+    table, thead, tbody, th, td, tr {
+        display: block; /* Make table rows stacked */
+    }
+
+    tr {
+        margin-bottom: 15px; /* Space between rows */
+    }
+
+    td {
+        text-align: right;  /* Move text to the right */
+        padding-left: 50%;  /* Space for labels */
+        position: relative; /* Needed for labels */
+    }
+
+    td::before {
+        content: attr(data-label); /* Show the column name before each value */
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 15px;
+        font-weight: bold;
+        text-align: left;
+    }
+}
